@@ -5,6 +5,8 @@
     <p v-for="(number, index) in numberPositive(numbers)" :key="index">
       {{ number }}
     </p>
+
+    <p>The sum of the positive numbers is {{ getPositiveNumbersSum() }}</p>
   </div>
 </template>
 
@@ -29,6 +31,10 @@ export default {
 
     numberPositive(numbers) {
       return numbers.filter((number) => number >= 0);
+    },
+    
+    getPositiveNumbersSum() {
+      return this.numberPositive(this.numbers).reduce((sum, val) => sum + val);
     },
   },
 };

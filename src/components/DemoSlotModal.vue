@@ -1,8 +1,8 @@
 <template>
   <div>
-       <slot name="body"></slot>
-       <p>***</p>
-       <slot name="footer"></slot>
+    <slot name="body"></slot>
+    <p>***</p>
+    <slot name="footer"></slot>
   </div>
 </template>
 

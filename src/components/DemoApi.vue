@@ -20,7 +20,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+      .get("https://jsonplaceholder.typicode.com/todos?_limit=5")
       .then((response) => (this.todos = response.data))
       .catch((error) => console.log(error));
   },

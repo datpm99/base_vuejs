@@ -12,9 +12,6 @@ export default {
   props: {
     name: String,
   },
-  data() {
-    return {};
-  },
 };
 </script>
 

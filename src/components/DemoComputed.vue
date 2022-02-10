@@ -1,6 +1,8 @@
 <template>
   <div>
+    <h3>Demo Computed</h3>
     <p>sum of number: {{ numberTotal }}</p>
+    <hr class="solid" />
   </div>
 </template>
 

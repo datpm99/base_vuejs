@@ -1,12 +1,14 @@
 <template>
   <div>
+    <h3>Demo Methods</h3>
     <p>Status: {{ statusFromId(status) }}</p>
 
     <p v-for="(number, index) in numberPositive(numbers)" :key="index">
       {{ number }}
     </p>
 
-    <p>The sum of the positive numbers is {{ getPositiveNumbersSum() }}</p>
+    <p>The sum of the positive numbers is: {{ getPositiveNumbersSum() }}</p>
+    <hr class="solid" />
   </div>
 </template>
 
@@ -19,6 +21,7 @@ export default {
       numbers: [-1, 0, 5, 3, -6, 1],
     };
   },
+
   methods: {
     statusFromId(id) {
       const status = {
@@ -32,7 +35,7 @@ export default {
     numberPositive(numbers) {
       return numbers.filter((number) => number >= 0);
     },
-    
+
     getPositiveNumbersSum() {
       return this.numberPositive(this.numbers).reduce((sum, val) => sum + val);
     },
@@ -40,5 +43,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>

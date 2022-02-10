@@ -4,7 +4,10 @@
     <ul>
       <li>Home</li>
       <li>About</li>
-      <li>Total todo: {{ totalTodos }}</li>
+      <li v-if="isAuthenticated">
+        Total todo: {{ totalTodos }} <v-btn>Logout</v-btn>
+      </li>
+      <li v-else><v-btn>Login</v-btn></li>
     </ul>
   </div>
 </template>
@@ -15,6 +18,9 @@ export default {
   computed: {
     totalTodos() {
       return this.$store.state.todos.length;
+    },
+    isAuthenticated() {
+      return this.$store.state.isAuthenticated;
     },
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="todo-list">
     <ul v-if="auth.isAuthenticated">
-      <li v-for="(todo, index) in todos" :key="index">
+      <li v-for="(todo,index) in todos" :key="`${todo.title}-${index}`">
         {{ todo.title }}
       </li>
     </ul>

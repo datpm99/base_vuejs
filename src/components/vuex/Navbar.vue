@@ -2,25 +2,26 @@
   <div class="navbar">
     <h1>My Vuex App Todos</h1>
     <ul>
-      <li>Home</li>
-      <li>About</li>
       <li v-if="isAuthenticated">
-        Total todo: {{ totalTodos }} <v-btn>Logout</v-btn>
+        Total todo: {{ todos.length }}
+        <v-btn @click="loginOrLogout">Logout</v-btn>
       </li>
-      <li v-else><v-btn>Login</v-btn></li>
+      <li v-else><v-btn @click="loginOrLogout">Login</v-btn></li>
     </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
   name: "Navbar",
   computed: {
-    totalTodos() {
-      return this.$store.state.todos.length;
-    },
-    isAuthenticated() {
-      return this.$store.state.isAuthenticated;
+    ...mapGetters(["todos", "isAuthenticated"]),
+  },
+  methods: {
+    loginOrLogout() {
+      this.$store.commit("TOGGLE_AUTH");
     },
   },
 };

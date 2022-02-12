@@ -21,8 +21,6 @@
         <HelloWorld />
         <Navbar />
         <Todos />
-        <StatusBar />
-        <ProgressBar />
       </v-container>
     </v-main>
   </v-app>
@@ -32,8 +30,6 @@
 import HelloWorld from "./components/HelloWorld";
 import Todos from "./components/vuex/Todos";
 import Navbar from "./components/vuex/Navbar";
-import StatusBar from "./components/vuex/StatusBar";
-import ProgressBar from "./components/vuex/ProgressBar";
 
 export default {
   name: "App",
@@ -42,8 +38,6 @@ export default {
     HelloWorld,
     Todos,
     Navbar,
-    StatusBar,
-    ProgressBar,
   },
 };
 </script>

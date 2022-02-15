@@ -1,0 +1,29 @@
+{
+    "names": {
+        "parentName": "Tên đơn vị cha",
+        "groupName": "Tên đơn vị",
+        "groupCode": "Mã đơn vị",
+        "partnerGroupCode": "Mã đối tác",
+        "partnerGroupName": "Tên đối tác",
+        "orderNo": "Thứ tự sắp xếp",
+        "userName": "Tên đăng nhập",
+        "fullName": "Tên người dùng",
+        "email": "Email",
+        "mobile": "Di động",
+        "dateOfBirth": "Ngày sinh",
+        "address": "Đia chỉ liên hệ",
+        "groupNameOrType": "Đơn vị/ phòng ban",
+        "roleId": "Vai trò",
+        "position": "Chức danh",
+        "fileAttachs": "Tài liệu đính kèm",
+        "contractSigned": "Hợp đồng ký kết",
+        "contractType": "Loại hợp đồng",
+        "contractName": "Tên hợp đồng",
+        "myRepresent": "Đại diện"
+    },
+    "message": {
+        "dateBefore": "{_field_} không được lớn hơn ngày hiện tại",
+        "checkMatch": "{_field_} đang bị trùng",
+        "ext": "{_field_} không đúng định dạng"
+    }
+}

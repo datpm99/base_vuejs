@@ -38,10 +38,14 @@
             </v-list-item-action>
 
             <v-spacer></v-spacer>
-            <v-btn @click="DELETE_TODO(task.id)" class="mr-10 error">delete</v-btn>
+            <v-btn @click="DELETE_TODO(task.id)" class="mr-10 error"
+              >delete</v-btn
+            >
 
             <v-scroll-x-transition>
-              <v-icon v-show="task.completed" color="success"> mdi-check </v-icon>
+              <v-icon v-show="task.completed" color="success">
+                mdi-check
+              </v-icon>
             </v-scroll-x-transition>
           </v-list-item>
         </template>

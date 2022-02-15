@@ -22,7 +22,7 @@
     </v-row>
 
     <v-divider class="mt-4"></v-divider>
-    <v-row class="my-1 align-center" justify="center"  v-show="isAuthenticated">
+    <v-row class="my-1 align-center" justify="center" v-show="isAuthenticated">
       <strong class="mx-4 info--text text--darken-2 mr-8">
         Remaining: {{ todos.length - doneTodos.length }}
       </strong>

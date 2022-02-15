@@ -1,0 +1,24 @@
+{
+    "names": {
+        "parentName": "Parent Name",
+        "groupName": "Group Name",
+        "groupCode": "Group Code",
+        "userName": "User name",
+        "fullName": "Full name",
+        "email": "Email",
+        "mobile": "Phone",
+        "dateOfBirth": "Date of birth",
+        "address": "Address",
+        "groupNameOrType": "Group name",
+        "roleId": "Role",
+        "position": "Position",
+        "fileAttachs": "File Attachs",
+        "contractSigned": "Contract Signed",
+        "contractType": "Contract Type",
+        "contractName": "Contract Name",
+        "myRepresent": "myRepresent"
+    },
+    "message": {
+        "dateBefore": "{_field_} cannot be greater than the current date"
+    }
+}

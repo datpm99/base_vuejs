@@ -3,7 +3,7 @@
     <h1 class="text-h4 blue--text">Vuex App Todos</h1>
 
     <v-row class="mt-4" justify="center">
-      <v-col cols="12" md="3" v-show="isAuthenticated">
+      <v-col cols="12" md="3">
         <h3 class="text-h5 success--text pl-4">
           Total Tasks:&nbsp;
           <v-fade-transition leave-absolute>
@@ -13,16 +13,11 @@
           </v-fade-transition>
         </h3>
       </v-col>
-
-      <v-col cols="12" md="2">
-        <v-btn @click="loginOrLogout" :color="getColorBtnLogin()">
-          {{ getTextBtnLogin() }}
-        </v-btn>
-      </v-col>
     </v-row>
 
     <v-divider class="mt-4"></v-divider>
-    <v-row class="my-1 align-center" justify="center" v-show="isAuthenticated">
+
+    <v-row class="my-1 align-center" justify="center">
       <strong class="mx-4 info--text text--darken-2 mr-8">
         Remaining: {{ todos.length - doneTodos.length }}
       </strong>
@@ -52,23 +47,9 @@ import { mapGetters } from "vuex";
 
 export default {
   name: "Navbar",
+
   computed: {
-    ...mapGetters(["todos", "isAuthenticated", "doneTodos", "progress"]),
-  },
-  methods: {
-    loginOrLogout() {
-      this.$store.commit("TOGGLE_AUTH");
-    },
-
-    getTextBtnLogin() {
-      if (this.isAuthenticated) return "Logout";
-      return "Login";
-    },
-
-    getColorBtnLogin() {
-      if (this.isAuthenticated) return "error";
-      return "primary";
-    },
+    ...mapGetters(["todos", "doneTodos", "progress"]),
   },
 };
 </script>

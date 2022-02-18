@@ -15,9 +15,20 @@ const router = new Router({
             component: () => import('@/views/login/Login'),
         },
         {
-            name: routeNames.HOME,
             path: '/',
-            component: () => import('@/views/home/Home'),
+            component: () => import('@/views/layout/default'),
+            children: [
+                {
+                    path: routePaths.HOME_PATH,
+                    name: routeNames.HOME,
+                    component: () => import('@/views/home/Home')
+                },
+                {
+                    path: routePaths.DEMO_VUEX_PATH,
+                    name: routeNames.DEMO_VUEX,
+                    component: () => import('@/views/demo_vuex/DemoVuex')
+                },
+            ],
         },
         {
             name: routeNames.HOME,

@@ -1,4 +1,5 @@
 export default {
     LOGIN: "LOGIN",
-    HOME: "HOME"
+    HOME: "HOME",
+    DEMO_VUEX: "DEMO_VUEX",
 }
